@@ -1,0 +1,36 @@
+.logo{
+    width: 200px;
+    position: absolute; 
+    top: -7%;
+    
+}
+input{
+    width:800px;
+    height: 30px;
+  border-radius: 100px; 
+}
+.dora{
+  position: absolute;
+  display: flex;
+   flex-wrap: wrap;
+  justify-content:space-between;
+  gap: 1rem;
+}
+.buji{
+  width: 400px;
+  height: 250px;
+  border-radius: 20px;
+}
+.motu{
+  width: 400px;
+  height: 250px ;
+  border-radius: 20px;
+  
+}
+.kagakaga{
+width: 400px;
+height: 250px;
+border-radius: 20px;
+
+
+}
