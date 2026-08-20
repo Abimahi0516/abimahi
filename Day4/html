@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hobbies</title>
+</head>
+<body>
+
+    <h1>Student Hobbies</h1>
+
+    <ul>
+        <li>Reading</li>
+        <li>Playing Cricket</li>
+        <li>Listening to Music</li>
+        <li>Drawing</li>
+        <li>Travelling</li>
+    </ul>
+
+    <h1>My Daily Routine</h1>
+
+    <ol>
+        <li>Wake up</li>
+        <li>Exercise</li>
+        <li>Have Breakfast</li>
+        <li>Attend Class</li>
+        <li>Study</li>
+        <li>Go to Sleep</li>
+    </ol>
+
+    <h1>Restaurant Food Menu</h1>
+
+    <ol>
+        <li>Starters
+            <ul>
+                <li>French Fries</li>
+                <li>Paneer Tikka</li>
+                <li>Spring Rolls</li>
+            </ul>
+        </li>
+
+        <li>Main Course
+            <ul>
+                <li>Chicken Biryani</li>
+                <li>Veg Fried Rice</li>
+                <li>Paneer Butter Masala</li>
+            </ul>
+        </li>
+
+        <li>Desserts
+            <ul>
+                <li>Ice Cream</li>
+                <li>Gulab Jamun</li>
+                <li>Brownie</li>
+            </ul>
+        </li>
+
+        <li>Drinks
+            <ul>
+                <li>Fresh Juice</li>
+                <li>Milkshake</li>
+                <li>Lemon Juice</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h1>Course Details</h1>
+
+    <ul>
+        <li>Web Development
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+
+        <li>Backend Development
+            <ul>
+                <li>Python</li>
+                <li>ASP.NET</li>
+                <li>PHP</li>
+            </ul>
+        </li>
+
+        <li>Database
+            <ul>
+                <li>MySQL</li>
+                <li>SQL Server</li>
+                <li>MongoDB</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <h1>Employee Information</h1>
+
+    <dl>
+        <dt><b>Employee Name</b></dt>
+        <dd>Jeni</dd>
+
+        <dt><b>Employee ID</b></dt>
+        <dd>101</dd>
+
+        <dt><b>Department</b></dt>
+        <dd>Web Development</dd>
+
+        <dt><b>Designation</b></dt>
+        <dd>Junior Web Developer</dd>
+
+        <dt><b>Skills</b></dt>
+        <dd>HTML, CSS, JavaScript, Python</dd>
+    </dl>
+</body>
+</html>
