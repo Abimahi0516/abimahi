@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes & Global Attributes</title>
+</head>
+
+<body>
+
+    <header id="top" class="header" title="This is the website header">
+        <h1>My Personal Profile</h1>
+        <p>Welcome to my profile page</p>
+    </header>
+
+    <nav>
+        <a href="#about" title="Go to About section">About</a> |
+        <a href="#skills" title="Go to Skills section">Skills</a> |
+        <a href="#contact" title="Go to Contact section">Contact</a>
+    </nav>
+
+    <main>
+
+        <section id="about" class="section">
+
+            <h2>About Me</h2>
+
+            <img
+                src="image/log2-removebg-preview.png"
+                alt="Profile Photo"
+                width="150"
+                height="150"
+                title="My Profile Photo"
+            >
+
+            <p>
+                My name is Abirami. I completed BCA and I am
+                interested in full-stack Development.
+            </p>
+
+        </section>
+
+        <section id="skills" class="section">
+
+            <h2>My Skills</h2>
+
+            <ul>
+                <li class="skill" data-skill="frontend">HTML</li>
+                <li class="skill" data-skill="frontend">CSS</li>
+                <li class="skill" data-skill="frontend">JavaScript</li>
+                <li class="skill" data-skill="backend">Python</li>
+            </ul>
+
+        </section>
+
+        <section id="contact" class="section">
+
+            <h2>Contact Me</h2>
+
+            <p>
+                Email:
+                <a href="mailto:example@gmail.com">
+                    example@gmail.com
+                </a>
+            </p>
+
+            <p>
+                Visit my
+                <a
+                    href="https://github.com/"
+                    target="_blank"
+                    rel="noopener"
+                    title="Open GitHub"
+                >
+                    GitHub
+                </a>
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Global Attributes Demo</h2>
+
+            <p id="demo" class="highlight" style="color: blue;"
+               title="This paragraph demonstrates global attributes">
+                This paragraph uses id, class, style and title attributes.
+            </p>
+
+            <p contenteditable="true">
+                You can edit this paragraph directly in the browser.
+            </p>
+
+            <p lang="en">
+                This text is written in English.
+            </p>
+
+            <p dir="rtl">
+                This text demonstrates right-to-left direction.
+            </p>
+
+            <p hidden>
+                This paragraph is hidden from the webpage.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer">
+
+        <p>&copy; 2026 My Personal Profile</p>
+
+    </footer>
+
+</body>
+</html>
