@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+<body>
+
+    <h1>Job Application Form</h1>
+
+    <form>
+
+        <!-- Full Name -->
+        <label>Full Name:</label>
+        <input type="text" name="fullname" placeholder="Enter your full name">
+        <br><br>
+
+        <!-- Email -->
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter your email">
+        <br><br>
+
+        <!-- Phone Number -->
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" placeholder="Enter your phone number">
+        <br><br>
+
+        <!-- Date of Birth -->
+        <label>Date of Birth:</label>
+        <input type="date" name="dob">
+        <br><br>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br><br>
+
+        <!-- Qualification -->
+        <label>Qualification:</label>
+        <select name="qualification">
+            <option value="">Select Qualification</option>
+            <option>BCA</option>
+            <option>B.Sc</option>
+            <option>B.Com</option>
+            <option>MCA</option>
+            <option>M.Sc</option>
+            <option>MBA</option>
+        </select>
+        <br><br>
+
+        <!-- Skills -->
+        <label>Skills:</label>
+        <br>
+        <input type="checkbox" name="skills" value="html"> HTML
+        <input type="checkbox" name="skills" value="css"> CSS
+        <input type="checkbox" name="skills" value="javascript"> JavaScript
+        <input type="checkbox" name="skills" value="python"> Python
+        <input type="checkbox" name="skills" value="java"> Java
+        <input type="checkbox" name="skills" value="sql"> SQL
+        <br><br>
+
+        <!-- Years of Experience -->
+        <label>Years of Experience:</label>
+        <input type="number" name="experience" min="0" placeholder="Enter years">
+        <br><br>
+
+        <!-- Resume -->
+        <label>Resume:</label>
+        <input type="file" name="resume">
+        <br><br>
+
+        <!-- Preferred Job Location -->
+        <label>Preferred Job Location:</label>
+        <select name="location">
+            <option value="">Select Location</option>
+            <option>Chennai</option>
+            <option>Bangalore</option>
+            <option>Hyderabad</option>
+            <option>Coimbatore</option>
+            <option>Remote</option>
+        </select>
+        <br><br>
+
+        <!-- Address -->
+        <label>Address:</label>
+        <br>
+        <textarea name="address" rows="4" cols="40"
+            placeholder="Enter your complete address"></textarea>
+        <br><br>
+
+        <!-- Password -->
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter password">
+        <br><br>
+
+        <!-- Agree to Terms -->
+        <input type="checkbox" name="terms">
+        <label>I agree to the Terms and Conditions</label>
+        <br><br>
+
+        <!-- Buttons -->
+        <input type="submit" value="Submit Application">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
