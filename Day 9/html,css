@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics</title>
+
+    <style>
+
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+    
+        #title {
+            color: darkblue;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        
+        .h2{
+            text-align:left;
+            background-color:brown
+        }
+        #p{
+            text-align:right;
+            background-color:blueviolet;
+        }
+        .p{
+            text-align:left;
+            background-color:cadetblue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 id="title">My Favourite Movies</h1>
+    <h2 class="h2">CSS Properties</h2>
+    <p id="p">This webpage demonstrates different CSS selectors and properties.</p>
+    <p class="p">This is another paragraph with a different style.</p>
+</body>
+</html>
