@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS </title>
+
+    <style>
+        .task1 {
+            width: 300px;
+            padding: 20px;
+            border: 10px solid green;
+            margin: 20px;
+        }
+        .task2 {
+            width: 200px;
+            background-color: lightblue;
+            padding: 10px;
+        }
+        .task3 {
+            width: 200px;
+            padding: 10px;
+            border: 2px solid red;
+        }
+        .task4 {
+            width: 200px;
+            padding: 15px;
+            border: 5px solid blue;
+        }
+        .task5 {
+            width: 200px;
+            padding: 15px;
+            border: 3px solid black;
+            margin-left: 25px;
+        }
+        .task7 {
+            height: 50px;
+            padding: 15px;
+            border: 5px solid red;
+        }
+        .task8 {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid black;
+            margin: 10px;
+        }
+        .task9 {
+            width: 600px;
+            padding: 20px;
+            border: 2px solid blue;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .container {
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .button {
+            padding: 20px 40px;
+            border: 2px solid blue;
+            background-color: lightblue;
+            box-sizing: border-box;
+        }
+        .task11 {
+            width: 250px;
+            padding: 40px 10px 20px 50px;
+            border: 1px solid black;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>welcome to HTML and CSS </h1>
+    <h2>Task 1</h2>
+    <div class="task1">welcome to task 1 </div>
+
+    <h2>Task 2</h2>
+    <div class="task2">welcome to task 2 </div>
+
+    <h2>Task 3</h2>
+    <div class="task3">welcome to task 3</div>
+
+    <h2>Task 4</h2>
+    <div class="task4"> welcome to task 4</div>
+
+    <h2>Task 5</h2>
+    <div class="task5">welcome to task 5</div>
+
+    <h2>Task 6</h2>
+    <p> welcome to task 6</p>
+
+    <p> Total Width </p>
+
+    <h2>Task 7</h2>
+    <div class="task7"> welcome to task 7</div>
+
+    <p></p>
+
+    <h2>Task 8</h2>
+    <div class="task8">welcome to task 8</div>
+
+    <p></p>
+
+    <h2>Task 9</h2>
+    <div class="task9"> welcome to task 9 </div>
+
+    <h2>Task 10</h2>
+    <div class="container">
+
+        <button class="button">Home</button>
+
+        <button class="button">About</button>
+
+        <button class="button">Contact</button>
+
+    </div>
+
+    <h2>Task 11</h2>
+
+    <div class="task11">welcome to task 11 </div>
+
+
+</body>
+</html>
