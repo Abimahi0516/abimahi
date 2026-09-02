@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: lightblue;
+            text-align: center;
+            border-radius: 10px;
+        }
+        p {
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+        h1 {
+            font-size: 6vw;
+            text-align: center;
+        }
+        .font1 {
+            font-family: Arial, sans-serif;
+        }
+
+        .font2 {
+            font-family: Georgia, serif;
+        }
+
+        .font3 {
+            font-family: "Courier New", monospace;
+        }
+        .grid-container {
+            width: 90%;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            padding: 30px;
+            background-color: lightcoral;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 20px;
+        }
+        @media (max-width: 767px) {
+
+            body {
+                background-color: lightyellow;
+            }
+
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+
+            body {
+                background-color: lightgreen;
+            }
+
+        }
+        @media (min-width: 1024px) {
+
+            body {
+                background-color: lightgray;
+            }
+
+        }
+        @media (max-width: 600px) {
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+          }
+        @media (min-width: 601px) and (max-width: 900px) {
+
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+        @media (min-width: 901px) and (max-width: 1199px) {
+
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+        @media (min-width: 1200px) {
+
+            .grid-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Media Queries</h1>
+    <div class="box">
+        <h2>Responsive Box</h2>
+        <p>This is a responsive box.</p>
+    </div>
+    <div class="box">
+        <h2>Paragraph </h2>
+
+        <p> this is a responsive paragraph. </p>
+    </div>
+    <div class="box">
+        <h2 class="font1"> Heading</h2>
+
+        <p>this is a heading responsive paragraph.</p>
+    </div>
+    <div class="box">
+
+        <h2 class="font1"> Font</h2>
+
+        <h2 class="font2"> Font</h2>
+
+        <h2 class="font3"> Font</h2>
+
+    </div>
+    <div class="grid-container">
+
+        <div class="card">Card 1</div>
+
+        <div class="card">Card 2</div>
+
+        <div class="card">Card 3</div>
+
+        <div class="card">Card 4</div>
+
+        <div class="card">Card 5</div>
+
+        <div class="card">Card 6</div>
+
+        <div class="card">Card 7</div>
+
+        <div class="card">Card 8</div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
