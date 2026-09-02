@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flexbox </title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 25px;
+            background-color: #222;
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        .center-container {
+            height: 300px;
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background-color: #ddd;
+        }
+
+        .center-box {
+            width: 150px;
+            height: 100px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: royalblue;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        .horizontal-nav {
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-evenly;
+
+            align-items: center;
+
+            background-color: #222;
+            padding: 20px;
+        }
+
+        .horizontal-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .horizontal-nav a:hover {
+            color: orange;
+        }
+
+        .vertical-nav {
+            width: 250px;
+            height: 300px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-evenly;
+
+            align-items: center;
+
+            background-color: #333;
+
+            margin: auto;
+
+            border-radius: 10px;
+        }
+
+        .vertical-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .vertical-nav a:hover {
+            color: yellow;
+        }
+
+        .card-container {
+            display: flex;
+
+            flex-direction: row;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background-color: #eee;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+
+        .product-container {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+            justify-content: center;
+        }
+
+        .product-card {
+            width: 180px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            background-color: white;
+
+            border: 1px solid #ddd;
+
+            border-radius: 10px;
+
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        .product-card .image {
+            height: 100px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #ddd;
+
+            margin-bottom: 15px;
+
+            font-size: 40px;
+        }
+
+        .product-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+
+            .card-container {
+                flex-direction: column;
+            }
+
+            .product-card {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <h1> Flexbox </h1>
+
+    <section>
+
+        <h2>1. Center a Box</h2>
+
+        <div class="center-container">
+
+            <div class="center-box"> Center Box </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>2. Horizontal Navigation Bar</h2>
+
+        <nav class="horizontal-nav">
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+
+        </nav>
+
+    </section>
+
+    <section>
+
+        <h2>3. Vertical Navigation Bar</h2>
+
+        <nav class="vertical-nav">
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+
+        </nav>
+
+    </section>
+
+    <section>
+
+        <h2>4. Card Layout</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>HTML</h3>
+                <p>Learn the structure of web pages.</p>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <p>Design beautiful websites.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Add functionality to websites.</p>
+            </div>
+
+            <div class="card">
+                <h3>Python</h3>
+                <p>Learn programming and backend development.</p>
+            </div>
+
+            <div class="card">
+                <h3>SQL</h3>
+                <p>Manage and store database information.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>5. Product Cards with Wrapping</h2>
+
+        <div class="product-container">
+
+            <div class="product-card">
+
+                <div class="image">image</div>
+
+                <h3>Smart Phone</h3>
+
+                <p class="price">₹20,000</p>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="image">ltop</div>
+
+                <h3>Laptop</h3>
+
+                <p class="price">₹50,000</p>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="image">hp</div>
+
+                <h3>Headphones</h3>
+
+                <p class="price">₹2,000</p>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="image">Swatch</div>
+
+                <h3>Smart Watch</h3>
+
+                <p class="price">₹4,000</p>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="image">camera</div>
+
+                <h3>Camera</h3>
+
+                <p class="price">₹35,000</p>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="image">gameconle</div>
+
+                <h3>Game Console</h3>
+
+                <p class="price">₹30,000</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>
