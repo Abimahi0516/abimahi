@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions And Hover Effects</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .box {
+            width: 250px;
+            min-height: 180px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .color-box {
+            background-color: #0e87d8;
+            color: white;
+            transition: background-color 0.5s ease;
+        }
+
+        .color-box:hover {
+            background-color: #d44839;
+        }
+
+        .grow-box {
+            background-color: #2ecc71;
+            color: white;
+            transition: transform 0.5s ease;
+        }
+
+        .grow-box:hover {
+            transform: scale(1.15);
+        }
+
+        .effect-box {
+            background-color: #9b59b6;
+            color: white;
+            transition: 
+                background-color 0.5s ease,
+                transform 0.5s ease,
+                box-shadow 0.5s ease;
+        }
+
+        .effect-box:hover {
+            background-color: #f39c12;
+            transform: scale(1.8);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .reveal-box {
+            background-color: #34495e;
+            color: white;
+        }
+
+        .hidden-content {
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .reveal-box:hover .hidden-content {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Transitions And Hover Effects</h1>
+
+    <div class="container">
+
+        <div class="box color-box">
+            <h2>Hover Me</h2>
+            <p>Color is blue</p>
+        </div>
+
+        <div class="box grow-box">
+            <h2>Hover Me</h2>
+            <p>color is green</p>
+        </div>
+
+        <div class="box effect-box">
+            <h2>Hover Me</h2>
+            <p>Color is violet</p>
+        </div>
+
+        <div class="box reveal-box">
+            <h2>Hover Me</h2>
+
+            <div class="hidden-content">
+                <p> Hidden content revealed!</p>
+                <p>color is dark blue</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
