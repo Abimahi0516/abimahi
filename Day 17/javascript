@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introduction to JavaScript</h1>
+
+    <h2>JavaScript</h2>
+
+    <script>
+        var name = "java";
+        let age = 20;
+        const course = "BCA";
+
+        console.log("Name:", name);
+        console.log("Age:", age);
+        console.log("Course:", course);
+
+        let studentName = "java"; 
+        console.log("Student Name:", studentName);      
+        let marks = 85;                    
+        let isStudent = true;              
+        let address = null;                
+        let phoneNumber;                   
+
+        console.log("Student Name:", studentName);
+        console.log("Marks:", marks);
+        console.log("Is Student:", isStudent);
+        console.log("Address:", address);
+        console.log("Phone Number:", phoneNumber);
+
+
+    </script>
+</body>
+</html>
