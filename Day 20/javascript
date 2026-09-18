@@ -1,0 +1,166 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>While Loop Programs</title> 
+</head> 
+<body> 
+ 
+<script> 
+    // WHILE LOOP 
+ 
+    console.log("WHILE LOOP") 
+
+    // task1: Series of 1 to 20 
+    let a = ""; 
+    let i = 1; 
+    while(i <= 20) 
+    { 
+        a = a + i + " "; 
+        i++; 
+    } 
+    console.log(a); 
+
+
+    // task2: Odd series from 1 to 20 
+    let b = ""; 
+    i = 1; 
+    while(i <= 20) 
+    { 
+        b = b + i + " "; 
+        i += 2; 
+    } 
+    console.log(b); 
+
+
+    // task3: Even series from 0 to 20 
+    let c = ""; 
+    i = 0; 
+    while(i <= 20) 
+    { 
+        c = c + i + " "; 
+        i += 2; 
+    } 
+    console.log(c); 
+
+
+    // task4: 5 Series from 0 to 25 
+    let d = ""; 
+    i = 0; 
+    while(i <= 25) 
+    { 
+        d = d + i + " "; 
+        i += 5; 
+    } 
+    console.log(d); 
+
+
+    // task5: 1 + 2 + 3 + 4 + ..... 
+    let e = ""; 
+    i = 1; 
+    while(i <= 10) 
+    { 
+        if(i < 10) 
+            e = e + i + " + "; 
+        else 
+            e = e + i; 
+        
+        i++; 
+    } 
+    console.log(e); 
+
+
+    // task6: 0 + 2 + 4 + 6 + ..... 
+    let f = ""; 
+    i = 0; 
+    while(i <= 10) 
+    { 
+        if(i < 10) 
+            f = f + i + " + "; 
+        else 
+            f = f + i; 
+        
+        i += 2; 
+    } 
+    console.log(f); 
+
+
+    // task7: 1 + 3 + 5 + 7 + 9 + .... 
+    let g = ""; 
+    i = 1; 
+    while(i <= 9) 
+    { 
+        if(i < 9) 
+            g = g + i + " + "; 
+        else 
+            g = g + i; 
+        
+        i += 2; 
+    } 
+    console.log(g); 
+
+
+    // task8: 0 + 5 + 10 + 15 + 20 + ..... 
+    let h = ""; 
+    i = 0; 
+    while(i <= 25) 
+    { 
+        if(i < 25) 
+            h = h + i + " + "; 
+        else 
+            h = h + i; 
+        
+        i += 5; 
+    } 
+    console.log(h); 
+
+
+    // task9: 1 / 1! + 2 / 2! + 3 / 3! + 4 / 4!..... 
+    let m = ""; 
+    i = 1; 
+    while(i <= 5) 
+    { 
+        if(i < 5) 
+            m = m + i + " / " + i + "! + "; 
+        else 
+            m = m + i + " / " + i + "!"; 
+        
+        i++; 
+    } 
+    console.log(m); 
+
+
+    // task10: 0 + 2 / 2! + 4 / 4! + 6 / 6!.... 
+    let n = ""; 
+    i = 0; 
+    while(i <= 10) 
+    { 
+        if(i < 10) 
+            n = n + i + " / " + i + "! + "; 
+        else 
+            n = n + i + " / " + i + "!"; 
+        
+        i += 2; 
+    } 
+    console.log(n); 
+
+
+    // task11: 1 / 1! + 3 / 3! + 5 / 5!.... 
+    let p = ""; 
+    i = 1; 
+    while(i <= 9) 
+    { 
+        if(i < 9) 
+            p = p + i + " / " + i + "! + "; 
+        else 
+            p = p + i + " / " + i + "!"; 
+        
+        i += 2; 
+    } 
+    console.log(p); 
+
+</script> 
+ 
+</body> 
+</html>
