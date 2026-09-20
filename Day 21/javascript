@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+// 12. Factorial of a given number
+//Example: 5! = 5 * 4 * 3 * 2 * 1 = 120
+
+let n = 5;
+let factorial = 1;
+
+for (let i = 1; i <= n; i++) {
+    factorial = factorial * i;
+}
+
+console.log("12. Factorial of", n, "=", factorial);
+
+
+// 13. Find the given number is Prime or Not
+
+let num = 17;
+let isPrime = true;
+
+if (num <= 1) {
+    isPrime = false;
+}
+
+for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+        isPrime = false;
+        break;
+    }
+}
+
+if (isPrime) {
+    console.log("13.", num, "is a Prime Number");
+} else {
+    console.log("13.", num, "is Not a Prime Number");
+}
+
+
+// 14. Print the Prime Number Series
+
+let limit = 50;
+
+console.log("14. Prime Number Series:");
+
+for (let num = 2; num <= limit; num++) {
+
+    let prime = true;
+
+    for (let i = 2; i < num; i++) {
+
+        if (num % i === 0) {
+            prime = false;
+            break;
+        }
+    }
+
+    if (prime) {
+        console.log(num);
+    }
+}
+
+
+// 15. Find the given number is Armstrong or Not
+// Example: 153 = 1³ + 5³ + 3³ = 153
+
+let armstrongNum = 153;
+let originalNum = armstrongNum;
+let sum = 0;
+
+while (armstrongNum > 0) {
+
+    let digit = armstrongNum % 10;
+
+    sum = sum + (digit * digit * digit);
+
+    armstrongNum = Math.floor(armstrongNum / 10);
+}
+
+if (sum === originalNum) {
+    console.log("15.", originalNum, "is an Armstrong Number");
+} else {
+    console.log("15.", originalNum, "is Not an Armstrong Number");
+}
+
+
+// 16. Print the Armstrong Number Series
+
+let armstrongLimit = 500;
+
+console.log("16. Armstrong Number Series:");
+
+for (let num = 1; num <= armstrongLimit; num++) {
+
+    let temp = num;
+    let sum = 0;
+
+    while (temp > 0) {
+
+        let digit = temp % 10;
+
+        sum = sum + (digit * digit * digit);
+
+        temp = Math.floor(temp / 10);
+    }
+
+    if (sum === num) {
+        console.log(num);
+    }
+}
+
+
+// 17. Fibonacci Series
+// 0 1 1 2 3 5 8 13 ...
+
+let terms = 10;
+
+let a = 0;
+let b = 1;
+
+console.log("17. Fibonacci Series:");
+
+for (let i = 1; i <= terms; i++) {
+
+    console.log(a);
+
+    let next = a + b;
+
+    a = b;
+    b = next;
+}
+
+
+// 18. Print the 5 Table
+
+let table = 5;
+
+console.log("18. Multiplication Table of", table);
+
+for (let i = 1; i <= 10; i++) {
+
+    console.log(table + " x " + i + " = " + (table * i));
+}
+
+
+// 19. Sum of Digits
+// Example: 1234 = 1 + 2 + 3 + 4 = 10
+
+let number = 1234;
+let digitSum = 0;
+
+while (number > 0) {
+
+    let digit = number % 10;
+
+    digitSum = digitSum + digit;
+
+    number = Math.floor(number / 10);
+}
+
+console.log("19. Sum of Digits =", digitSum);
+
+
+
+// 20. Palindrome or Not
+// Examples: MADAM, MALAYALAM, 121
+
+let word = "MADAM";
+
+let reversed = "";
+
+for (let i = word.length - 1; i >= 0; i--) {
+
+    reversed = reversed + word[i];
+}
+
+if (word === reversed) {
+    console.log("20.", word, "is a Palindrome");
+} else {
+    console.log("20.", word, "is Not a Palindrome");
+}
+</script>
+
+</body>
+</html>
+
