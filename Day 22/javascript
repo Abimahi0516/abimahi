@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop Functions</title>
+</head>
+<body>
+<script>
+    // WHILE LOOP
+    // WITHOUT PARAMETER
+    console.log("WITHOUT PARAMETER");
+
+    // task1: Series of 1 to 20
+    let q1 = () =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= 20)
+        {
+            s = s + i + " ";
+            i++;
+        }
+        console.log("task1:", s);
+    }
+    q1();
+
+    // task2: Odd numbers 1 to 20
+    let q2 = () =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= 20)
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        console.log("task2:", s);
+    }
+    q2();
+
+    // task3: Even numbers 0 to 20
+    let q3 = () =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= 20)
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        console.log("task3:", s);
+    }
+    q3();
+
+    // task4: 5 Series 0 to 25
+    let q4 = () =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= 25)
+        {
+            s = s + i + " ";
+            i += 5;
+        }
+        console.log("task4:", s);
+    }
+    q4();
+
+    // task5: 1 + 2 + 3 + ... + 10
+    let q5 = () =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= 10)
+        {
+            if(i < 10)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i++;
+        }
+        console.log("Q5:", s);
+    }
+    q5();
+
+    // task6: 0 + 2 + 4 + 6 + ...
+    let q6 = () =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= 20)
+        {
+            if(i < 20)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i += 2;
+        }
+        console.log("task6:", s);
+    }
+    q6();
+
+    // task7: 1 + 3 + 5 + 7 + ...
+    let q7 = () =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= 20)
+        {
+            if(i < 19)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i += 2;
+        }
+        console.log("task7:", s);
+    }
+    q7();
+
+    // task8: 0 + 5 + 10 + 15 + 20 + ...
+    let q8 = () =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= 25)
+        {
+            if(i < 25)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i += 5;
+        }
+        console.log("task8:", s);
+    }
+    q8();
+
+    // task9: 1/1! + 2/2! + 3/3! + ...
+    let q9 = () =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= 5)
+        {
+            if(i < 5)
+                s = s + i + "/" + i + "! + ";
+            else
+                s = s + i + "/" + i + "!";
+            i++;
+        }
+        console.log("task9:", s);
+    }
+    q9();
+
+    // task10: 0 + 2/2! + 4/4! + ...
+    let q10 = () =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= 10)
+        {
+            if(i == 0)
+            {
+                s = s + i + " + ";
+            }
+            else if(i < 10)
+            {
+                s = s + i + "/" + i + "! + ";
+            }
+            else
+            {
+                s = s + i + "/" + i + "!";
+            }
+            i += 2;
+        }
+        console.log("task10:", s);
+    }
+    q10();
+
+    // task11: 1/1! + 3/3! + 5/5! + ...
+    let q11 = () =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= 10)
+        {
+            if(i == 0)
+            {
+                s = s + i + " + ";
+            }
+            else if(i < 9)
+            {
+                s = s + i + "/" + i + "! + ";
+            }
+            else
+            {
+                s = s + i + "/" + i + "!";
+            }
+            i += 2;
+        }
+        console.log("task11:", s);
+    }
+    q11();
+
+    // task12: Factorial of a given number
+    let q12 = () =>
+    {
+        let n = 5;
+        let fact = 1;
+        let i = n;
+        while(i >= 1)
+        {
+            fact = fact * i;
+            i--;
+        }
+        console.log("task12:", fact)
+    }
+    q12();
+
+    // task13: Prime or Not
+    let q13 = () =>
+    {
+        let n = 7;
+        let count = 0;
+        let i = 1;
+        while(i <= n)
+        {
+            if(n % i == 0)
+            {
+                count++;
+            }
+            i++;
+        }
+        if(count == 2)
+        {
+            console.log("task13:", n + " is Prime");
+        }
+        else
+        {
+            console.log("task13:", n + " is Not Prime");
+        }
+    }
+    q13();
+
+    // task14: Prime Number Series
+    let q14 = () =>
+    {
+        let s = "";
+        let n = 1;
+        while(n <= 50)
+        {
+            let count = 0;
+            let i = 1;
+            while(i <= n)
+            {
+                if(n % i == 0)
+                {
+                    count++;
+                }
+                i++;
+            }
+            if(count == 2)
+            {
+                s = s + n + " ";
+            }
+            n++;
+        }
+        console.log("task14:", s);
+    }
+    q14();
+
+    // task15: Armstrong or Not
+    let q15 = () =>
+    {
+        let n = 153;
+        let temp = n;
+        let sum = 0;
+        while(temp > 0)
+        {
+            let r = temp % 10;
+            sum = sum + r * r * r;
+            temp = parseInt(temp / 10);
+        }
+        if(sum == n)
+        {
+            console.log("task15:", n + " is Armstrong");
+        }
+        else
+        {
+            console.log("task15:", n + " is Not Armstrong");
+        }
+    }
+    q15();
+
+    // task16: Armstrong Number Series
+    let q16 = () =>
+    {
+        let s = "";
+        let n = 1;
+        while(n <= 1000)
+        {
+            let temp = n;
+            let sum = 0;
+            while(temp > 0)
+            {
+                let r = temp % 10;
+                sum = sum + r * r * r;
+                temp = parseInt(temp / 10);
+            }
+            if(sum == n)
+            {
+                s = s + n + " ";
+            }
+            n++;
+        }
+        console.log("task16:", s);
+    }
+    q16();
+
+    // task17: Fibonacci Series
+    let q17 = () =>
+    {
+        let s = "";
+        let a = 0;
+        let b = 1;
+        let i = 1;
+        while(i <= 10)
+        {
+            s = s + a + " ";
+            let c = a + b;
+            a = b;
+            b = c;
+            i++;
+        }
+        console.log("task17:", s);
+    }
+    q17();
+
+    // task18: 5 Table
+    let q18 = () =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= 10)
+        {
+            s = s + i + " * 5 = " + (i * 5) + "\n";
+            i++;
+        }
+        console.log("task18:\n" + s);
+    }
+    q18();
+
+    // task19: Sum of Digits
+    let q19 = () =>
+    {
+        let n = 123;
+        let temp = n;
+        let sum = 0;
+        while(temp > 0)
+        {
+            let r = temp % 10;
+            sum = sum + r;
+            temp = parseInt(temp / 10);
+        }
+        console.log("task19:", sum);
+    }
+    q19();
+
+    // task20: Palindrome or Not
+    let q20 = () =>
+    {
+        let n = "MALAYALAM";
+        let rev = "";
+        let i = n.length - 1;
+        while(i >= 0)
+        {
+            rev = rev + n[i];
+            i--;
+        }
+        if(n.toLowerCase() == rev.toLowerCase())
+        {
+            console.log("Q20:", n + " is Palindrome");
+        }
+        else
+        {
+            console.log("task20:", n + " is Not Palindrome");
+        }
+    }
+    q20();
+
+    // WITH PARAMETER
+    console.log("WITH PARAMETER");
+
+    // task1
+    let q1p = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            s = s + i + " ";
+            i++;
+        }
+        console.log("task1:", s);
+    }
+    q1p(20);
+
+    // task2
+    let q2p = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        console.log("task2:", s);
+    }
+    q2p(20);
+
+    // task3
+    let q3p = n =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= n)
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        console.log("task3:", s);
+    }
+    q3p(20);
+
+    // task4
+    let q4p = n =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= n)
+        {
+            s = s + i + " ";
+            i += 5;
+        }
+        console.log("task4:", s);
+    }
+    q4p(25);
+
+    // task5
+    let q5p = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            if(i < n)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i++;
+        }
+        console.log("task5:", s);
+    }
+    q5p(10);
+
+    // task6
+    let q6p = n =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= n)
+        {
+            if(i < n)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i += 2;
+        }
+        console.log("task6:", s);
+    }
+    q6p(20);
+
+    // task7
+    let q7p = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            if(i < 19)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i += 2;
+        }
+        console.log("task7:", s);
+    }
+    q7p(20);
+
+    // task8
+    let q8p = n =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= n)
+        {
+            if(i < n)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i += 5;
+        }
+        console.log("task8:", s);
+    }
+    q8p(20);
+
+    // task9
+    let q9p = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            if(i < n)
+                s = s + i + "/" + i + "! + ";
+            else
+                s = s + i + "/" + i + "!";
+            i++;
+        }
+        console.log("task9:", s);
+    }
+    q9p(5);
+
+    // task10
+    let q10p = n =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= n)
+        {
+            if(i == 0)
+            {
+                s = s + "0 + ";
+            }
+            else if(i < n)
+            {
+                s = s + i + "/" + i + "! + ";
+            }
+            else
+            {
+                s = s + i + "/" + i + "!";
+            }
+            i += 2;
+        }
+        console.log("task10:", s);
+    }
+    q10p(6);
+
+    // task11
+    let q11p = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            if(i < n)
+                s = s + i + "/" + i + "! + ";
+            else
+                s = s + i + "/" + i + "!";
+            i += 2;
+        }
+        console.log("task11:", s);
+    }
+    q11p(7);
+
+    // task12
+    let q12p = n =>
+    {
+        let fact = 1;
+        let i = n;
+        while(i >= 1)
+        {
+            fact = fact * i;
+            i--;
+        }
+        console.log("task12:", fact);
+    }
+    q12p(5);
+
+    // task13
+    let q13p = n =>
+    {
+        let count = 0;
+        let i = 1;
+        while(i <= n)
+        {
+            if(n % i == 0)
+            {
+                count++;
+            }
+            i++;
+        }
+        if(count == 2)
+        {
+            console.log("task13:", n + " is Prime");
+        }
+        else
+        {
+            console.log("task13:", n + " is Not Prime");
+        }
+    }
+    q13p(7);
+
+    // task14
+    let q14p = n =>
+    {
+        let s = "";
+        let j = 1;
+        while(j <= n)
+        {
+            let count = 0;
+            let i = 1;
+            while(i <= j)
+            {
+                if(j % i == 0)
+                {
+                    count++;
+                }
+                i++;
+            }
+            if(count == 2)
+            {
+                s = s + j + " ";
+            }
+            j++;
+        }
+        console.log("task14:", s);
+    }
+    q14p(50);
+
+    // task15
+    let q15p = n =>
+    {
+        let temp = n;
+        let sum = 0;
+        while(temp > 0)
+        {
+            let r = temp % 10;
+            sum = sum + r * r * r;
+            temp = parseInt(temp / 10);
+        }
+        if(sum == n)
+        {
+            console.log("task15:", n + " is Armstrong");
+        }
+        else
+        {
+            console.log("task15:", n + " is Not Armstrong");
+        }
+    }
+    q15p(153);
+
+    // task16
+    let q16p = n =>
+    {
+        let s = "";
+        let j = 1;
+        while(j <= n)
+        {
+            let temp = j;
+            let sum = 0;
+            while(temp > 0)
+            {
+                let r = temp % 10;
+                sum = sum + r * r * r;
+                temp = parseInt(temp / 10);
+            }
+            if(sum == j)
+            {
+                s = s + j + " ";
+            }
+            j++;
+        }
+        console.log("task16:", s);
+    }
+    q16p(1000);
+
+    // task17
+    let q17p = n =>
+    {
+        let s = "";
+        let a = 0;
+        let b = 1;
+        let i = 1;
+        while(i <= n)
+        {
+            s = s + a + " ";
+            let c = a + b;
+            a = b;
+            b = c;
+            i++;
+        }
+        console.log("task17:", s);
+    }
+    q17p(10);
+
+    // task18
+    let q18p = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            s = s + i + " * 5 = " + (i * 5) + "\n";
+            i++;
+        }
+        console.log("task18:\n" + s);
+    }
+    q18p(10);
+
+    // task19
+    let q19p = n =>
+    {
+        let sum = 0;
+        while(n > 0)
+        {
+            let r = n % 10;
+            sum = sum + r;
+            n = parseInt(n / 10);
+        }
+        console.log("task19:", sum);
+    }
+    q19p(123);
+
+    // task20
+    let q20p = n =>
+    {
+        let rev = "";
+        let i = n.length - 1;
+        while(i >= 0)
+        {
+            rev = rev + n[i];
+            i--;
+        }
+        if(n.toLowerCase() == rev.toLowerCase())
+        {
+            console.log("task20:", n + " is Palindrome");
+        }
+        else
+        {
+            console.log("task20:", n + " is Not Palindrome");
+        }
+    }
+    q20p("MALAYALAM");
+
+    // WITH PARAMETER + RETURN
+    console.log("WITH PARAMETER + RETURN");
+
+    // task1
+    let q1r = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            s = s + i + " ";
+            i++;
+        }
+        return s;
+    }
+    console.log("task1:", q1r(20));
+
+    // task2
+    let q2r = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        return s;
+    }
+    console.log("task2:", q2r(20));
+
+    // task3
+    let q3r = n =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= n)
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        return s;
+    }
+    console.log("task3:", q3r(20));
+
+    // task4
+    let q4r = n =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= n)
+        {
+            s = s + i + " ";
+            i += 5;
+        }
+        return s;
+    }
+    console.log("task4:", q4r(25));
+
+    // task5
+    let q5r = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            if(i < n)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i++;
+        }
+        return s;
+    }
+    console.log("task5:", q5r(10));
+
+    // task6
+    let q6r = n =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= n)
+        {
+            if(i < n)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i += 2;
+        }
+        return s;
+    }
+    console.log("task6:", q6r(20));
+
+    // task7
+    let q7r = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            if(i < 19)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i += 2;
+        }
+        return s;
+    }
+    console.log("task7:", q7r(20));
+
+    // task8
+    let q8r = n =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= n)
+        {
+            if(i < n)
+                s = s + i + " + ";
+            else
+                s = s + i;
+            i += 5;
+        }
+        return s;
+    }
+    console.log("task8:", q8r(20));
+
+    // task9
+    let q9r = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            if(i < n)
+                s = s + i + "/" + i + "! + ";
+            else
+                s = s + i + "/" + i + "!";
+            i++;
+        }
+        return s;
+    }
+    console.log("task9:", q9r(5));
+
+    // task10
+    let q10r = n =>
+    {
+        let s = "";
+        let i = 0;
+        while(i <= n)
+        {
+            if(i == 0)
+            {
+                s = s + "0 + ";
+            }
+            else if(i < n)
+            {
+                s = s + i + "/" + i + "! + ";
+            }
+            else
+            {
+                s = s + i + "/" + i + "!";
+            }
+            i += 2;
+        }
+        return s;
+    }
+    console.log("task10:", q10r(6));
+
+    // task11
+    let q11r = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            if(i < n)
+                s = s + i + "/" + i + "! + ";
+            else
+                s = s + i + "/" + i + "!";
+            i += 2;
+        }
+        return s;
+    }
+    console.log("task11:", q11r(7));
+
+    // task12
+    let q12r = n =>
+    {
+        let fact = 1;
+        let i = n;
+        while(i >= 1)
+        {
+            fact = fact * i;
+            i--;
+        }
+        return fact;
+    }
+    console.log("task12:", q12r(5));
+
+    // task13
+    let q13r = n =>
+    {
+        let count = 0;
+        let i = 1;
+        while(i <= n)
+        {
+            if(n % i == 0)
+            {
+                count++;
+            }
+            i++;
+        }
+        if(count == 2)
+        {
+            return "Prime";
+        }
+        else
+        {
+            return "Not Prime";
+        }
+    }
+    console.log("task13:", q13r(7));
+
+    // task14
+    let q14r = n =>
+    {
+        let s = "";
+        let j = 1;
+        while(j <= n)
+        {
+            let count = 0;
+            let i = 1;
+            while(i <= j)
+            {
+                if(j % i == 0)
+                {
+                    count++;
+                }
+                i++;
+            }
+            if(count == 2)
+            {
+                s = s + j + " ";
+            }
+            j++;
+        }
+        return s;
+    }
+    console.log("task14:", q14r(100));
+
+    // task15
+    let q15r = n =>
+    {
+        let temp = n;
+        let sum = 0;
+        while(temp > 0)
+        {
+            let r = temp % 10;
+            sum = sum + r * r * r;
+            temp = parseInt(temp / 10);
+        }
+        if(sum == n)
+        {
+            return "Armstrong";
+        }
+        else
+        {
+            return "Not Armstrong";
+        }
+    }
+    console.log("task15:", q15r(153));
+
+    // task16
+    let q16r = n =>
+    {
+        let s = "";
+        let j = 1;
+        while(j <= n)
+        {
+            let temp = j;
+            let sum = 0;
+            while(temp > 0)
+            {
+                let r = temp % 10;
+                sum = sum + r * r * r;
+                temp = parseInt(temp / 10);
+            }
+            if(sum == j)
+            {
+                s = s + j + " ";
+            }
+            j++;
+        }
+        return s;
+    }
+    console.log("task16:", q16r(1000));
+
+    // task17
+    let q17r = n =>
+    {
+        let s = "";
+        let a = 0;
+        let b = 1;
+        let i = 1;
+        while(i <= n)
+        {
+            s = s + a + " ";
+            let c = a + b;
+            a = b;
+            b = c;
+            i++;
+        }
+        return s;
+    }
+    console.log("task17:", q17r(10));
+
+    // task18
+    let q18r = n =>
+    {
+        let s = "";
+        let i = 1;
+        while(i <= n)
+        {
+            s = s + i + " * 5 = " + (i * 5) + "\n";
+            i++;
+        }
+        return s;
+    }
+    console.log("task18:\n" + q18r(10));
+
+    // task19
+    let q19r = n =>
+    {
+        let sum = 0;
+        while(n > 0)
+        {
+            let r = n % 10;
+            sum = sum + r;
+            n = parseInt(n / 10);
+        }
+        return sum;
+    }
+    console.log("task19:", q19r(123));
+
+    // task20
+    let q20r = n =>
+    {
+        let rev = "";
+        let i = n.length - 1;
+        while(i >= 0)
+        {
+            rev = rev + n[i];
+            i--;
+        }
+        if(n.toLowerCase() == rev.toLowerCase())
+        {
+            return "Palindrome";
+        }
+        else
+        {
+            return "Not Palindrome";
+        }
+    }
+    console.log("task20:", q20r("MALAYALAM"));
+</script>
+</body>
+</html>
