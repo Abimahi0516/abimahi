@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //task1: Employee Details 
+     
+    class Employee 
+    { 
+        constructor(empId, empName,salary) 
+        { 
+            this.empId = empId; 
+            this.empName = empName; 
+            this.salary = salary; 
+        } 
+        readEmployee() 
+        { 
+            this.empId = prompt("Enter Employee ID:"); 
+            this.empName = prompt("Enter Employee Name:"); 
+            this.salary = prompt("Enter salary:"); 
+        } 
+        displayEmployee() 
+        { 
+            console.log(`Employee ID: ${this.empId} \nEmployee Name: ${this.empName} \nSalary: ${this.salary}`); 
+        } 
+ 
+    } 
+    let emp1 = new Employee(); 
+    console.log("task1: Employee Details"); 
+    emp1.readEmployee(); 
+    emp1.displayEmployee(); 
+//task2 
+class Vehicle 
+{ 
+    constructor(vehicleType) 
+    { 
+        this.vehicleType = vehicleType; 
+    } 
+    displayInfo()
+    { 
+        console.log(`Vehicle Type: ${this.vehicleType}`); 
+    } 
+} 
+class Car extends Vehicle 
+{ 
+    constructor(vehicleType, brand, year, model) 
+    { 
+        super(vehicleType); 
+        this.brand = brand; 
+        this.year = year; 
+        this.model = model; 
+    } 
+    displayCarInfo() 
+    { 
+        this.displayInfo(); 
+        console.log(`Brand: ${this.brand}, Year: ${this.year}, Model: ${this.model}`); 
+    } 
+} 
+class SportsCar extends Car 
+{ 
+    constructor(vehicleType, brand, year, model, topSpeed, engineType)
+    {
+        super(vehicleType, brand, year, model);
+        this.topSpeed = topSpeed;
+        this.engineType = engineType;
+    }
+
+    displaySportsCarInfo()
+    {
+        this.displayCarInfo();
+        console.log(`Top Speed: ${this.topSpeed}, Engine Type: ${this.engineType}`);
+    }
+} 
+ 
+let car1 = new SportsCar("Car", "TATA", 2022, "Punch", "250 km/h", "V6"); 
+console.log("task2: Car Details");
+car1.displaySportsCarInfo();
+
+
+//task3
+class Shape
+{
+    display()
+    {
+        console.log("This is a Shape");
+    }
+}
+
+class Rectangle extends Shape
+{
+    constructor(length, breadth)
+    {
+        super();
+        this.length = length;
+        this.breadth = breadth;
+    }
+
+    display()
+    {
+        let area = this.length * this.breadth;
+        console.log(`Length: ${this.length}, Breadth: ${this.breadth}`);
+        console.log(`Area of Rectangle: ${area}`);
+    }
+}
+
+let rectangle1 = new Rectangle(20, 10);
+console.log("task3: Area of Rectangle:")
+rectangle1.display();
+
+//task4
+class Account
+{
+    constructor(accountNo)
+    {
+        this.accountNo = accountNo;
+    }
+
+    displayAccount()
+    {
+        console.log(`Account Number: ${this.accountNo}`);
+    }
+}
+
+class SavingsAccount extends Account
+{
+    constructor(accountNo, balance)
+    {
+        super(accountNo);
+        this.balance = balance;
+    }
+
+    displaySavingsAccount()
+    {
+        this.displayAccount();
+        console.log(`Balance: ${this.balance}`);
+    }
+}
+
+let account1 = new SavingsAccount("Account123", 15000);
+console.log("task4: Accound Details:")
+account1.displaySavingsAccount();
+
+//task5
+class Device
+{
+    constructor(deviceName)
+    {
+        this.deviceName = deviceName;
+    }
+
+    displayDevice()
+    {
+        console.log(`Device Name: ${this.deviceName}`);
+    }
+}
+
+class Mobile extends Device
+{
+    constructor(deviceName, model)
+    {
+        super(deviceName);
+        this.model = model;
+    }
+
+    displayMobile()
+    {
+        this.displayDevice();
+        console.log(`Model: ${this.model}`);
+    }
+}
+class SmartPhone extends Mobile
+{
+    constructor(deviceName, model, os)
+    {
+        super(deviceName, model);
+        this.os = os;
+    }
+
+    displaySmartPhone()
+    {
+        this.displayMobile();
+        console.log(`OS: ${this.os}`);
+    }
+}
+
+let phone1 = new SmartPhone("Mobile", "Vivoy58", "Android");
+console.log("task5: SmartPhone details:");
+phone1.displaySmartPhone();
+
+//task6 
+class Area 
+{ 
+    Circumference(a, b) 
+    { 
+        if(arguments.length === 1) 
+        { 
+            let circumference = 4 * a; 
+            console.log(`Circumference of Square: ${circumference}`); 
+        } 
+        else if(arguments.length === 2) 
+        { 
+            let circumference = 2 * (a + b); 
+            console.log(`Circumference of Rectangle: ${circumference}`); 
+        } 
+        else if(arguments.length === 3) 
+        { 
+            let circumference = 2 * Math.PI * a; 
+            console.log(`Circumference of Circle: ${circumference.toFixed(2)}`); 
+        } 
+        else 
+        { 
+            console.log("Invalid arguments"); 
+        } 
+    } 
+} 
+ 
+let area1 = new Area(); 
+console.log("task6: Circumference:");
+area1.Circumference(5); 
+area1.Circumference(10, 6); 
+area1.Circumference(7, 0, 0);
+
+//task7
+class Shape2
+{
+    Draw(...args)
+    {
+        if(args.length === 1)
+        {
+            console.log(`Drawing Circle with Radius: ${args[0]}`);
+        }
+        else if(args.length === 2)
+        {
+            console.log(`Drawing Rectangle with Length: ${args[0]}, Breadth: ${args[1]}`);
+        }
+        else if(args.length === 3)
+        {
+            console.log(`Drawing Triangle with Sides: ${args[0]}, ${args[1]}, ${args[2]}`);
+        }
+        else
+        {
+            console.log("Invalid arguments");
+        }
+    }
+}
+let shape1 = new Shape2();
+console.log("task7: Shape:")
+shape1.Draw(5);
+shape1.Draw(10, 6);
+shape1.Draw(2,3,4);
+    </script>
+</body>
+</html>
