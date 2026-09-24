@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM BASICS</title>
+</head>
+<body>
+    <!--task1: getElementById-->
+
+    <h2>Task 1 - Finding Elements by ID</h2>
+    <p id="msg">This is a Paragraph Text..</p>
+    <button id="btn1">Click Me</button><br><br>
+    <div id="box1" style="background-color: palevioletred; width: 100px; height: 100px"></div>
+    <script>
+        // task1.1 - Change paragraph text
+        let para = document.getElementById("msg");
+        para.innerHTML = "This is an overwritten text";
+
+        // task1.2 - Disable button when clicked
+        let btn = document.getElementById("btn1");
+        btn.onclick = function() {
+            btn.disabled = true;
+        };
+
+        // task1.3 - Change div background color
+        let myBox = document.getElementById("box1");
+        myBox.style.backgroundColor = "red";
+    </script>
+
+    <!--task2: getElementsByTagName-->
+
+    <h2>Task 2 - Finding Elements by Tag Name</h2>
+    <p>This is a text 1</p>
+    <p>This is a text 2</p>
+    <p>This is a text 3</p>
+    <p>This is a text 4</p>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>Nodejs</li>
+    </ul>
+    <h4 id="result"></h4>
+    <h1>Abi</h1>
+    <h1>Mahi</h1>
+    <h1>Jey</h1>
+    <script>
+        // task.1 - Change color of all p elements
+        let myPara = document.getElementsByTagName("p");
+        for(let i = 0; i < myPara.length; i++) {
+            myPara[i].style.color = "red";
+        }
+
+        // task2.2 - Count li elements
+        let list = document.getElementsByTagName("li");
+        let count = list.length;
+        document.getElementById("result").innerHTML = "Number of li elements: " + count;
+
+        // task2.3 - Change font size of all h1 elements
+        let myHeading = document.getElementsByTagName("h1");
+        for(let i = 0; i < myHeading.length; i++) {
+            myHeading[i].style.fontSize = "15px";
+        }
+    </script>
+
+    <!--task3: getElementsByClassName-->
+
+    <h2>Task3 - Finding Elements by Class Name</h2>
+
+    <!-- task3.1 -->
+    <p class="box2">box 1</p>
+    <p class="box2">box 2</p>
+    <p class="box2">box 3</p>
+
+    <!-- task3.2 -->
+    <p class="hidden-item">This text will be hidden.</p>
+    <p class="hidden-item">This text will be hidden.</p>
+    <p>This text will be visible.</p>
+
+    <!-- task3.3 -->
+    <p class="message"></p>
+    <p class="message"></p>
+    <p class="message"></p>
+    <script>
+        // task3.1 - Change background color
+        let boxes = document.getElementsByClassName("box2");
+        for(let i = 0; i < boxes.length; i++) {
+            boxes[i].style.backgroundColor = "blue";
+        }
+
+        // task3.2 - Hide elements
+        let items = document.getElementsByClassName("hidden-item");
+        for(let i = 0; i < items.length; i++) {
+            items[i].style.display = "none";
+        }
+
+        // task3.3 - Add text
+        let messages = document.getElementsByClassName("message");
+
+        messages[0].innerHTML = "Welcome to Html";
+        messages[1].innerHTML = "Welcome to CSS";
+        messages[2].innerHTML = "Welcome to Javascript";
+    </script>
+
+    <!--task4: querySelector-->
+
+    <h2>Task 4 - Finding Elements using CSS Selectors</h2>
+
+    <!-- task4.1 -->
+    <p class="p4">paragraph 1</p>
+    <p class="p4">paragraph 2</p>
+    <p class="p4">paragraph 3</p>
+    <p class="p4">paragraph 4</p>
+
+    <!-- task4.2 -->
+    <p class="p5">This is a message.</p>
+
+    <!-- task4.3 & task4.4 -->
+    <form>
+        <input type="text" id="name" value="jey">
+        <br><br>
+        <input type="password" value="290396">
+    </form>
+    <script>
+        // task4.1 - Select first p element and change text
+        let myPara2 = document.querySelector(".p4");
+        myPara2.innerHTML = "This is the changed text";
+
+
+        // task4.2 - Select element with specific class and change color
+        let myPara3 = document.querySelector(".p5");
+        myPara3.style.color = "blue";
+
+
+        // task4.3 - Select input inside form and get its value
+        let input = document.querySelector("form input");
+        let value = input.value;
+        console.log(value);
+
+
+        // task4.4 - Select input using attribute selector
+        let textInput = document.querySelector('input[type="text"]');
+        textInput.style.backgroundColor = "yellow";
+    </script>
+</body>
+</html>
