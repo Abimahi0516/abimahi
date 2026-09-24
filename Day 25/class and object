@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+   <script> 
+    //task1: Student Details 
+ 
+    class Student 
+    { 
+        constructor(rollNo, name, marks) 
+        { 
+            this.rollNo = rollNo; 
+            this.name = name; 
+            this.marks = marks; 
+        } 
+        displayStudent() 
+        { 
+            console.log(`Roll Number: ${this.rollNo}, Name: ${this.name}, Marks: ${this.marks}`); 
+        } 
+    } 
+    let stud1 = new Student(101, "mahi", 95); 
+    let stud2 = new Student(102, "Jeyy", 97); 
+    console.log("task1: Student Details:"); 
+    stud1.displayStudent(); 
+    stud2.displayStudent(); 
+ 
+    //task2: Employee Details 
+     
+    class Employee 
+    { 
+        constructor(empId, empName, designation,salary) 
+        { 
+            this.empId = empId; 
+            this.empName = empName; 
+            this.designation = designation; 
+            this.salary = salary; 
+        } 
+        readEmployee() 
+        { 
+            this.empId = prompt("Enter Employee ID:"); 
+            this.empName = prompt("Enter Employee Name:"); 
+            this.designation = prompt("Enter designation: "); 
+            this.salary = prompt("Enter salary:"); 
+        } 
+        displayEmployee() 
+        { 
+            console.log(`Employee ID: ${this.empId} \nEmployee Name: ${this.empName} \nDesignation: ${this.designation} \nSalary: ${this.salary}`); 
+        } 
+ 
+    } 
+    let emp1 = new Employee(); 
+    console.log("task2: Employee Details"); 
+    emp1.readEmployee(); 
+    emp1.displayEmployee(); 
+
+
+    //task3: Custommer Details
+
+    class Custommer
+    {
+        constructor(CustomerId, CustomerName, Mobile, Address)
+        {
+            this.CustomerId = CustomerId;
+            this.CustomerName = CustomerName;
+            this.Mobile = Mobile;
+            this.Address = Address;
+        }
+        readCustommer()
+        {
+            this.CustomerId = prompt("Enter Customer ID:");
+            this.CustomerName = prompt("Enter Customer Name:");
+            this.Mobile = prompt("Enter Mobile:");
+            this.Address = prompt("Enter Address:");
+        }
+        displayCustommer()
+        {
+            console.log(`Customer ID: ${this.CustomerId} \nCustomer Name: ${this.CustomerName} \nMobile: ${this.Mobile} \nAddress: ${this.Address}`);
+        }
+    }
+    let c1 = new Custommer();
+    console.log("task3: Custommer Details");
+    c1.readCustommer();
+    c1.displayCustommer();
+
+
+    //task4: Staff Details
+
+    class Staff
+    {
+        constructor(StaffId, SName, Mobile, Email, department, Address)
+        {
+            this.StaffId = StaffId;
+            this.SName = SName;
+            this.Mobile = Mobile;
+            this.Email = Email;
+            this.department = department;
+            this.Address = Address;
+        }
+        readStaff()
+        {
+            this.StaffId = prompt("Enter Staff ID:");
+            this.SName = prompt("Enter Staff Name:");
+            this.Mobile = prompt("Enter Mobile:");
+            this.Email = prompt("Enter Email:");
+            this.department = prompt("Enter Department:");
+            this.Address = prompt("Enter Address:");
+        }
+        displayStaff()
+        {
+            console.log(`Staff ID: ${this.StaffId} \nStaff Name: ${this.SName} \nMobile: ${this.Mobile} \nEmail: ${this.Email} \nDepartment: ${this.department} \nAddress: ${this.Address}`);
+        }
+    }
+    let staff1 = new Staff();
+    console.log("task4: Staff Details");
+    staff1.readStaff();
+    staff1.displayStaff();
+   </script> 
+</body> 
+</html>
