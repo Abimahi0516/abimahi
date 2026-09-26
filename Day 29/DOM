@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 29 - DOM Events</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .task {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 18px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #hoverBox,
+        #eventHoverBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            margin-top: 10px;
+        }
+
+        .dark {
+            background-color: #222;
+            color: white;
+        }
+
+        .dark .task {
+            border-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> DOM Events & Event Listener</h1>
+
+    <!-- Task 1 -->
+    <div class="task">
+        <h3>1. Button Click</h3>
+
+        <button id="helloBtn">Click Me</button>
+
+        <p id="helloText"></p>
+    </div>
+
+
+    <!-- Task 2 -->
+    <div class="task">
+        <h3>2. Change Text Color</h3>
+
+        <p id="colorText">
+            This paragraph will change its color.
+        </p>
+
+        <button id="colorBtn">Change Color</button>
+    </div>
+
+
+    <!-- Task 3 -->
+    <div class="task">
+        <h3>3. Mouse Hover</h3>
+
+        <div id="hoverBox">
+            Move Mouse Here
+        </div>
+    </div>
+
+
+    <!-- Task 4 -->
+    <div class="task">
+        <h3>4. Double-Click Event</h3>
+
+        <button id="doubleClickBtn">
+            Double Click Me
+        </button>
+    </div>
+
+
+    <!-- Task 5 -->
+    <div class="task">
+        <h3>5. Keyboard Event</h3>
+
+        <input
+            type="text"
+            id="keyboardInput"
+            placeholder="Press any key"
+        >
+
+        <p id="keyOutput"></p>
+    </div>
+
+    <h2>Event Listener Tasks</h2>
+
+    <!-- Task 6 -->
+    <div class="task">
+        <h3>1. Button Click Counter</h3>
+
+        <button id="counterBtn">
+            Click Counter
+        </button>
+
+        <p>Count: <span id="count">0</span></p>
+    </div>
+
+
+    <!-- Task 7 -->
+    <div class="task">
+        <h3>2. Change Text</h3>
+
+        <p id="changeText">
+            Original Text
+        </p>
+
+        <button id="changeTextBtn">
+            Change Text
+        </button>
+    </div>
+
+
+    <!-- Task 8 -->
+    <div class="task">
+        <h3>3. Toggle Dark Mode</h3>
+
+        <button id="darkModeBtn">
+            Dark Mode
+        </button>
+    </div>
+
+
+    <!-- Task 9 -->
+    <div class="task">
+        <h3>4. Mouse Hover Effect</h3>
+
+        <div id="eventHoverBox">
+            Hover Over Me
+        </div>
+    </div>
+
+
+    <!-- Task 10 -->
+    <div class="task">
+        <h3>5. Live Input Display</h3>
+
+        <input
+            type="text"
+            id="liveInput"
+            placeholder="Type something..."
+        >
+
+        <p id="liveOutput"></p>
+    </div>
+
+
+    <script>
+
+
+        // 1. Button Click
+        // Display "Hello, World!"
+
+        const helloBtn = document.getElementById("helloBtn");
+        const helloText = document.getElementById("helloText");
+
+        helloBtn.addEventListener("click", function () {
+            helloText.textContent = "Hello, World!";
+        });
+
+
+        // 2. Change Text Color
+
+        const colorBtn = document.getElementById("colorBtn");
+        const colorText = document.getElementById("colorText");
+
+        colorBtn.addEventListener("click", function () {
+            colorText.style.color = "red";
+        });
+
+
+        // 3. Mouse Hover
+
+        const hoverBox = document.getElementById("hoverBox");
+
+        hoverBox.addEventListener("mouseenter", function () {
+            hoverBox.style.backgroundColor = "lightgreen";
+        });
+
+        hoverBox.addEventListener("mouseleave", function () {
+            hoverBox.style.backgroundColor = "lightblue";
+        });
+
+
+        // 4. Double-Click Event
+
+        const doubleClickBtn =
+            document.getElementById("doubleClickBtn");
+
+        doubleClickBtn.addEventListener("dblclick", function () {
+            alert("Button double-clicked!");
+        });
+
+
+        // 5. Keyboard Event
+
+        const keyboardInput =
+            document.getElementById("keyboardInput");
+
+        const keyOutput =
+            document.getElementById("keyOutput");
+
+        keyboardInput.addEventListener("keydown", function (event) {
+            keyOutput.textContent =
+                "Key Pressed: " + event.key;
+        });
+
+        // 6. Button Click Counter
+
+        const counterBtn =
+            document.getElementById("counterBtn");
+
+        const count =
+            document.getElementById("count");
+
+        let counter = 0;
+
+        counterBtn.addEventListener("click", function () {
+
+            counter++;
+
+            count.textContent = counter;
+
+        });
+
+
+        // 7. Change Text
+
+        const changeTextBtn =
+            document.getElementById("changeTextBtn");
+
+        const changeText =
+            document.getElementById("changeText");
+
+        changeTextBtn.addEventListener("click", function () {
+
+            changeText.textContent =
+                "Hello, JavaScript!";
+
+        });
+
+
+        // 8. Toggle Dark Mode
+
+        const darkModeBtn =
+            document.getElementById("darkModeBtn");
+
+        darkModeBtn.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark");
+
+        });
+
+
+        // 9. Mouse Hover Effect
+
+        const eventHoverBox =
+            document.getElementById("eventHoverBox");
+
+        eventHoverBox.addEventListener("mouseenter", function () {
+
+            eventHoverBox.style.backgroundColor = "orange";
+
+        });
+
+        eventHoverBox.addEventListener("mouseleave", function () {
+
+            eventHoverBox.style.backgroundColor = "lightblue";
+
+        });
+
+
+        // 10. Live Input Display
+
+        const liveInput =
+            document.getElementById("liveInput");
+
+        const liveOutput =
+            document.getElementById("liveOutput");
+
+        liveInput.addEventListener("input", function () {
+
+            liveOutput.textContent =
+                liveInput.value;
+
+        });
+
+    </script>
+
+</body>
+</html>
