@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .question {
+            margin-bottom: 25px;
+        }
+
+        .question h3 {
+            margin-bottom: 12px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        .checkbox-group label,
+        .radio-group label {
+            display: block;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 5px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #submitBtn {
+            background-color: green;
+            color: white;
+        }
+
+        #clearBtn {
+            background-color: red;
+            color: white;
+        }
+
+        #message {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Customer Feedback Form</h1>
+
+    <form id="feedbackForm">
+
+        <!-- 1. Full Name -->
+        <div class="question">
+            <h3>1. Full Name</h3>
+
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Enter your full name"
+                required
+            >
+        </div>
+
+
+        <!-- 2. Email -->
+        <div class="question">
+            <h3>2. Email Address</h3>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email address"
+                required
+            >
+        </div>
+
+
+        <!-- 3. Reason for Visit -->
+        <div class="question">
+            <h3>3. Reason for Visit / Purchase</h3>
+
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio"
+                           name="reason"
+                           value="Product Purchase"
+                           required>
+                    Product Purchase
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="reason"
+                           value="Customer Support">
+                    Customer Support
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="reason"
+                           value="Browsing / Research">
+                    Browsing / Research
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="reason"
+                           value="Other">
+                    Other
+                </label>
+
+            </div>
+        </div>
+
+
+        <!-- 4. Overall Satisfaction -->
+        <div class="question">
+            <h3>4. Overall Satisfaction</h3>
+
+            <label>
+                <input type="radio" name="satisfaction" value="1 - Very Dissatisfied" required>
+                1 - Very Dissatisfied
+            </label>
+
+            <label>
+                <input type="radio" name="satisfaction" value="2 - Dissatisfied">
+                2 - Dissatisfied
+            </label>
+
+            <label>
+                <input type="radio" name="satisfaction" value="3 - Neutral">
+                3 - Neutral
+            </label>
+
+            <label>
+                <input type="radio" name="satisfaction" value="4 - Satisfied">
+                4 - Satisfied
+            </label>
+
+            <label>
+                <input type="radio" name="satisfaction" value="5 - Very Satisfied">
+                5 - Very Satisfied
+            </label>
+        </div>
+
+
+        <!-- 5. Ease of Use -->
+        <div class="question">
+            <h3>5. Ease of Use / Navigation</h3>    
+
+            <label>
+                <input type="radio" name="ease" value="Very Easy" required>
+                Very Easy
+            </label>
+
+            <label>
+                <input type="radio" name="ease" value="Easy">
+                Easy
+            </label>
+
+            <label>
+                <input type="radio" name="ease" value="Neutral">
+                Neutral
+            </label>
+
+            <label>
+                <input type="radio" name="ease" value="Difficult">
+                Difficult
+            </label>
+
+            <label>
+                <input type="radio" name="ease" value="Very Difficult">
+                Very Difficult
+            </label>
+        </div>
+
+
+        <!-- 6. Product Quality -->
+        <div class="question">
+            <h3>6. Product / Service Quality</h3>
+
+            <label>
+                <input type="radio" name="quality" value="Excellent" required>
+                Excellent
+            </label>
+
+            <label>
+                <input type="radio" name="quality" value="Good">
+                Good
+            </label>
+
+            <label>
+                <input type="radio" name="quality" value="Average">
+                Average
+            </label>
+
+            <label>
+                <input type="radio" name="quality" value="Poor">
+                Poor
+            </label>
+
+            <label>
+                <input type="radio" name="quality" value="Very Poor">
+                Very Poor
+            </label>
+        </div>
+
+
+        <!-- 7. Staff Helpfulness -->
+        <div class="question">
+            <h3>7. Staff / Customer Support Helpfulness</h3>
+
+            <label>
+                <input type="radio" name="staff" value="N/A - No interaction" required>
+                N/A - No interaction
+            </label>
+
+            <label>
+                <input type="radio" name="staff" value="Extremely Helpful">
+                Extremely Helpful
+            </label>
+
+            <label>
+                <input type="radio" name="staff" value="Somewhat Helpful">
+                Somewhat Helpful
+            </label>
+
+            <label>
+                <input type="radio" name="staff" value="Unhelpful">
+                Unhelpful
+            </label>
+        </div>
+
+
+        <!-- 8. Recommendation -->
+        <div class="question">
+            <h3>8. How likely are you to recommend us to a friend?</h3>
+
+            <input
+                type="number"
+                id="recommend"
+                min="0"
+                max="10"
+                placeholder="Score from 0 to 10"
+                required
+            >
+        </div>
+
+
+        <!-- 9. Improvement -->
+        <div class="question">
+            <h3>9. What can we improve?</h3>
+
+            <div class="checkbox-group">
+
+                <label>
+                    <input type="checkbox"
+                           name="improve"
+                           value="Product Selection">
+                    Product Selection
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           name="improve"
+                           value="Pricing">
+                    Pricing
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           name="improve"
+                           value="Website / App">
+                    Website / App
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           name="improve"
+                           value="Delivery / Service Speed">
+                    Delivery / Service Speed
+                </label>
+
+                <label>
+                    <input type="checkbox"
+                           name="improve"
+                           value="Customer Support">
+                    Customer Support
+                </label>
+
+            </div>
+        </div>
+
+
+        <!-- 10. Comments -->
+        <div class="question">
+            <h3>10. Additional Comments</h3>
+
+            <textarea
+                id="comments"
+                placeholder="Enter your comments here..."
+            ></textarea>
+        </div>
+
+
+        <!-- Buttons -->
+        <div class="buttons">
+
+            <button type="submit" id="submitBtn">
+                Submit Feedback
+            </button>
+
+            <button type="button" id="clearBtn">
+                Clear Storage
+            </button>
+
+        </div>
+
+        <p id="message"></p>
+
+    </form>
+
+</div>
+
+
+<script>
+
+    // Get Form
+    const form = document.getElementById("feedbackForm");
+
+    const message = document.getElementById("message");
+
+    const clearBtn = document.getElementById("clearBtn");
+
+
+    // Submit Event
+    form.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        // Get Full Name
+        const fullName =
+            document.getElementById("fullName").value;
+
+
+        // Get Email
+        const email =
+            document.getElementById("email").value;
+
+
+        // Get Reason
+        const reason =
+            document.querySelector(
+                'input[name="reason"]:checked'
+            ).value;
+
+
+        // Get Satisfaction
+        const satisfaction =
+            document.querySelector(
+                'input[name="satisfaction"]:checked'
+            ).value;
+
+
+        // Get Ease
+        const ease =
+            document.querySelector(
+                'input[name="ease"]:checked'
+            ).value;
+
+
+        // Get Quality
+        const quality =
+            document.querySelector(
+                'input[name="quality"]:checked'
+            ).value;
+
+
+        // Get Staff
+        const staff =
+            document.querySelector(
+                'input[name="staff"]:checked'
+            ).value;
+
+
+        // Get Recommendation Score
+        const recommend =
+            document.getElementById("recommend").value;
+
+
+        // Get Improvement Checkboxes
+        const improvements = [];
+
+        document
+            .querySelectorAll('input[name="improve"]:checked')
+            .forEach(function(checkbox) {
+
+                improvements.push(checkbox.value);
+
+            });
+
+
+        // Get Comments
+        const comments =
+            document.getElementById("comments").value;
+
+
+        // Create Feedback Object
+        const feedback = {
+
+            fullName: fullName,
+
+            email: email,
+
+            reason: reason,
+
+            satisfaction: satisfaction,
+
+            ease: ease,
+
+            quality: quality,
+
+            staff: staff,
+
+            recommend: recommend,
+
+            improvements: improvements,
+
+            comments: comments
+
+        };
+
+
+        // Convert Object into JSON
+        const feedbackData =
+            JSON.stringify(feedback);
+
+
+        // Store in Local Storage
+        localStorage.setItem(
+            "customerFeedback",
+            feedbackData
+        );
+
+
+        // Store in Session Storage
+        sessionStorage.setItem(
+            "customerFeedback",
+            feedbackData
+        );
+
+
+        // Display Success Message
+        message.textContent =
+            "Feedback saved successfully!";
+
+        message.style.color = "green";
+
+
+        // Clear Form
+        form.reset();
+
+    });
+
+
+    // Clear Local & Session Storage
+    clearBtn.addEventListener("click", function() {
+
+        localStorage.removeItem("customerFeedback");
+
+        sessionStorage.removeItem("customerFeedback");
+
+        message.textContent =
+            "Local Storage and Session Storage cleared!";
+
+        message.style.color = "red";
+
+    });
+
+</script>
+
+</body>
+</html>
