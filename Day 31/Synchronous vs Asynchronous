@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Synchronous vs Asynchronous</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #syncBtn {
+            background-color: blue;
+            color: white;
+        }
+
+        #asyncBtn {
+            background-color: green;
+            color: white;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #eee;
+            min-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JavaScript Synchronous vs Asynchronous</h1>
+
+        <h2>Synchronous Example</h2>
+
+        <button id="syncBtn">
+            Run Synchronous Code
+        </button>
+
+
+        <h2>Asynchronous Example</h2>
+
+        <button id="asyncBtn">
+            Run Asynchronous Code
+        </button>
+
+
+        <div id="output">
+            Output will appear here...
+        </div>
+
+    </div>
+
+
+       
+    <script>
+
+        const syncBtn = document.getElementById("syncBtn");
+
+        const asyncBtn = document.getElementById("asyncBtn");
+
+        const output = document.getElementById("output");
+
+
+    
+
+        syncBtn.addEventListener("click", function() {
+
+            output.innerHTML = "";
+
+            output.innerHTML += "Step 1: Start<br>";
+
+            output.innerHTML += "Step 2: Processing...<br>";
+
+            output.innerHTML += "Step 3: End<br>";
+
+        });
+
+
+       
+
+        asyncBtn.addEventListener("click", function() {
+
+            output.innerHTML = "";
+
+            output.innerHTML += "Step 1: Start<br>";
+
+
+            setTimeout(function() {
+
+                output.innerHTML +=
+                    "Step 2: This runs after 3 seconds<br>";
+
+            }, 3000);
+
+
+            output.innerHTML +=
+                "Step 3: End<br>";
+
+        });
+
+    </script>
+
+</body>
+</html>
