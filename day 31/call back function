@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back function</title>
+</head>
+<body>
+    <script>
+        //Q1
+        function calculate(num1, num2, callback)
+        {
+            let result = callback(num1, num2);
+            console.log("Q1: Addition: " + result);
+        }
+        function add(a, b)
+        {
+            return a + b;
+        }
+        calculate(10,20,add);
+
+        //Q2
+        function greetUser(name, callback)
+        {
+           callback(name);
+        }
+        function display(name)
+        {
+            console.log("Q2: Welcome " + name ); 
+        }
+        greetUser("Abi", display);
+
+        //Q3
+        function processArray(numbers, callback)
+        {
+            const result = [];
+            for( const num of numbers){
+                result.push(callback(num));
+            }
+            return result;
+        }
+        function double(num)
+        {
+            return num* 2;
+        }
+        const numbers = [10, 20, 30, 40, 50];
+        let result = processArray(numbers, double);
+        console.log("Q3: Doubled Array: " + result);
+
+        //Q4
+        function findNumber(numbers, callback)
+        {
+            return numbers.find(callback);
+        }
+        function isEven(num)
+        {
+            return num % 2 == 0;
+        }
+        let numbers2 = [11, 15, 23, 48, 12, 19];
+        let even = findNumber(numbers2, isEven);
+        console.log("Q4: First Even Number: " + even);
+
+        //Q5
+        function removeNegative(numbers, callback)
+        {
+            return numbers.filter(callback);
+        }
+        function isPositive(num)
+        {
+            return num >= 0;
+        }
+        let numbers3 = [4, -2, -1, -0.4, -9, 3, 9, 5, -8, 10];
+        let positiveNos = removeNegative(numbers3, isPositive);
+        console.log("Q5: Positive Numbers: " + positiveNos);
+
+        //Q6
+        function checkEligibility(age, callback)
+        {
+            callback(age);
+        }
+        function isEligible(age)
+        {
+            if(age >= 18){
+                console.log(`Q6: ${age} - Eligible to vote`);
+            }
+            else{
+                console.log(`Q6: ${age} - Not eligible to vote`);
+            }
+        }
+        checkEligibility(21, isEligible);
+    </script>
+</body>
+</html>
