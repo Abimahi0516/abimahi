@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1 : Basic Async Function
+        function getMessage()
+        {
+            return new Promise((resolve, reject) =>{
+                setTimeout(resolve, 2000,"Q1: Welcome to Async and Await");
+            });
+        }
+        async function asyncMessage(){
+            let result = await getMessage();
+            console.log(result);
+        }
+        asyncMessage();
+
+        //2 :  Fetch User Data (API Simulation)
+        function getUser()
+        {
+            return new Promise((resolve, reject)=> {
+                setTimeout(resolve, 1500, 
+                {
+                    id: 1,
+                    name: "Abi",
+                    email: "abi@gmail.com"
+                });
+            });
+        }
+        async function displayUser()
+        {
+            let user = await getUser();
+            console.log("Q2: User name: " + user.name);
+            console.log("Email: " + user.email);
+        }
+        displayUser();
+
+        //3 : Error Handling with Try–Catch
+        async function loginUser(isLoggedIn)
+        {
+            try
+            {
+                if(isLoggedIn)
+                   return "Q3: Login Successful";
+                else
+                 throw "Q3: Invalid Credentials";
+            }
+            catch(error)
+            {
+                console.log(error);
+            }
+        }
+        async function displayLogin()
+        {
+           let result = await loginUser(true);
+           console.log(result);
+        }
+        displayLogin();
+
+        //4 : Sequential Async Operations
+        function getOrder()
+        {
+            return new Promise((resolve,reject) => {
+                setTimeout(resolve, 1000, "Order Received");
+            });
+        }
+        function processOrder()
+        {
+            return new Promise((resolve,reject) => {
+                setTimeout(resolve, 1000, "Order Processed");
+            });
+        }
+        function deliverOrder()
+        {
+            return new Promise((resolve,reject) => {
+                setTimeout(resolve, 1000, "Order Delivered");
+            });
+        }
+        async function orderStatus(){
+            let result1 = await getOrder();
+            console.log("Q4:" + result1);
+
+            let result2 = await processOrder();
+            console.log(result2);
+
+            let result3 = await deliverOrder();
+            console.log(result3);
+        }
+        orderStatus();
+
+        //5 : Real-Time Example (Fetch + Delay)
+        function getProducts()
+        {
+            return new Promise((resolve, reject) => {
+                setTimeout(resolve, 2000, ["Laptop", "Mobile", "Tablet"]);
+            });
+        }
+        async function displayProducts()
+        {
+            console.log("Q5: Loading Products....");
+            let products = await getProducts();
+            console.log(products);
+        }
+        displayProducts();
+    </script>
+</body>
+</html>
