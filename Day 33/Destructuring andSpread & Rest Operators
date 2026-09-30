@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  ==========================================
+        //  1. Extract First & Last Element
+        // ==========================================
+
+              let arr1 = [10, 20, 30, 40, 50];
+              let [first, , , , last] = arr1;
+
+              console.log("First:", first);
+              console.log("Last:", last);
+
+        // ==========================================
+        // 2. Skip Middle Value
+        // ==========================================
+
+
+              let arr2 = [100, 200, 300];
+              let [firstValue, , thirdValue] = arr2;
+
+              console.log("First Value:", firstValue);
+              console.log("Third Value:", thirdValue);
+
+
+       //==========================================
+       // 3. Separate First Element & Remaining
+       //==========================================
+
+
+
+              let arr3 = [1, 2, 3, 4, 5];
+              let [a, ...rest] = arr3;
+
+              console.log("a:", a);
+              console.log("rest:", rest);
+
+
+
+        // ==========================================
+        // 4. Merge Two Arrays Using Spread
+        // ==========================================
+
+  
+              let a1 = [1, 2];
+              let b1 = [3, 4];
+              let mergedArray = [...a1, ...b1];
+
+              console.log("Merged Array:", mergedArray);
+
+
+        // ==========================================
+        // 5. Clone an Array
+        // ==========================================
+
+             let arr4 = [10, 20, 30];
+             let clonedArray = [...arr4];
+
+             console.log("Original Array:", arr4);
+             console.log("Cloned Array:", clonedArray);
+
+
+        // ==========================================
+        // 6. Extract Properties from Object
+        // ==========================================
+
+             let product = {
+                 id: 1,
+                 name: "Mobile",
+                 price: 15000
+                };
+
+             let { name, price } = product;
+
+             console.log("Name:", name);
+             console.log("Price:", price);
+
+
+        // ==========================================
+        // 7. Rename Variables Using Destructuring
+        // ==========================================
+
+              let user = {
+                  name: "Raj",
+                  age: 25
+                };
+
+              let { name: fullName } = user;
+
+              console.log("Full Name:", fullName);
+
+
+        // ==========================================
+        // 8. Nested Object Destructuring
+        // ==========================================
+
+              let student = {
+                  marks: {
+                  math: 95,
+                  science: 90
+                }
+              };
+
+              let {
+                marks: { math, science }
+              } = student;
+
+             console.log("Math:", math);
+             console.log("Science:", science);
+
+
+       // ==========================================
+       // 9. Function Parameter Destructuring
+       // ==========================================
+
+              function show({ name, age }) {
+              console.log("Name:", name);
+              console.log("Age:", age);
+            }
+
+            let person = {
+                name: "Abi",
+                age: 20
+            };
+
+            show(person);
+
+
+       // ============================================
+       // 10. Remove First Element and Add New Values
+       // ============================================
+
+           let arr5 = [10, 20, 30, 40];
+           let [, ...remaining] = arr5;
+           let newArray = [100, 200, ...remaining];
+
+           console.log("New Array:", newArray);
+
+    </script>
+</body>
+</html>
