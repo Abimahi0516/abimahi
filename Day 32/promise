@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //task1
+        let myPromise1 = new Promise((resolve, reject) => {
+           setTimeout(resolve, 2000, "Welcome to Js Promise");
+        });
+        myPromise1.then((message) => console.log(message)).catch((error) => console.log(error));
+
+        //task2
+        let myPromise2 = new Promise((resolve, reject) => {
+           setTimeout(reject, 3000, "Invalid Data");
+        });
+        myPromise2.then((message) => console.log(message)).catch((error) => console.log(error));
+
+        //task3
+        function checkNumber(num)
+        {
+            return new Promise((resolve, reject) => {
+                if(num % 2 != 0)
+                   resolve("Number is odd");
+                else
+                   reject("Number is even");
+            });
+        }
+        checkNumber(9).then((message) => console.log(message)).catch((error) => console.log(error));
+
+        //task4
+        function isEligible(age)
+        {
+            return new Promise((resolve, reject) => {
+                if(age >= 18)
+                   resolve("Eligible for Employment");
+                else
+                   reject("Not Eligible for Employment");
+            });
+        }
+        isEligible(21).then((message) => console.log(message)).catch((error) => console.log(error));
+
+
+        //task5
+        function Sum(a, b)
+        {
+            return new Promise((resolve, reject) => {
+            if(b >= 0)
+               resolve(a + b);
+            else
+               reject("b is a negative value");
+            });
+        }
+        Sum(10, 20).then((message) => console.log("Sum:", message)).catch((error) => console.log(error));
+
+        //task6
+        let orderFood = new Promise((resolve, reject) => {
+            console.log("Order Placed");
+            setTimeout(resolve, 5000, "Food is ready!");
+        });
+        orderFood.then((message) => console.log(message)).catch((error) => console.log(error));
+
+        //task7
+        function checkString(str)
+        {
+            return new Promise((resolve, reject) =>{
+                if(str.length > 0)
+                   resolve("String contains Characters");
+                else
+                   reject("String is empty");
+            });
+
+        }
+        checkString("Hello").then((message) => console.log(message)).catch((error) => console.log(error));
+
+        //task8
+        function findEven(num)
+        {
+            return new Promise((resolve, reject) =>{
+                if(num % 2 == 0)
+                   resolve("Number is even");
+                else
+                   reject("Number is odd");
+            });
+
+        }
+        findEven(10).then((message) => console.log(message)).catch((error) => console.log(error));
+
+        //task9
+        let promise1 = new Promise((resolve, reject) => {
+            setTimeout(resolve, 1000, "Promise 1 completed");
+        });
+        let promise2 = new Promise((resolve, reject)=>{
+            setTimeout(resolve,2000, "Promise 2 completed");
+        });
+        let promise3 = new Promise((resolve, reject)=>{
+            setTimeout(resolve,3000, "Promise 3 completed");
+        });
+        Promise.all([promise1, promise2, promise3]).then((message) => console.log(message)).catch((error) => console.log(error));
+
+        //task10
+        let promise4 = new Promise((resolve, reject) => {
+            setTimeout(resolve, 1000, "Promise 1 completed");
+        });
+        let promise5 = new Promise((resolve, reject)=>{
+            setTimeout(reject,2000, "Promise 2 rejected");
+        });
+        let promise6 = new Promise((resolve, reject)=>{
+            setTimeout(resolve,3000, "Promise 3 completed");
+        });
+        Promise.race([promise4, promise5, promise6]).then((message) => console.log(message)).catch((error) => console.log(error));
+
+
+    </script>
+</body>
+</html>
