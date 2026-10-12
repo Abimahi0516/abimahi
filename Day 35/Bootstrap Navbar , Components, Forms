@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+     <!-- Task 1 -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Services</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+      <!-- Task 2 -->
+      <div class="d-flex flex-wrap gap-5 m-5" id="services">
+        <div class="card" style="width: 300px">
+            <img src="web development.jpg" class="card-img-top" alt="Web Development">
+            <div class="card-body">
+                <h5 class="card-title">Web Development</h5>
+                <p class="card-text">We create responsive and user friendly websites.</p>
+                <button class="btn btn-primary">View Details</button>
+            </div>
+        </div>
+        <div class="card" style="width: 300px">
+            <img src="app.jpg" class="card-img-top" alt="App Development">
+            <div class="card-body">
+                <h5 class="card-title">App Development</h5>
+                <p class="card-text">We develop simple and attractive mobile applications.</p>
+                <button class="btn btn-success">View Details</button>
+            </div>
+        </div>
+         <div class="card" style="width: 300px">
+            <img src="uiux.png" class="card-img-top" alt="UI/UX Design">
+            <div class="card-body">
+                <h5 class="card-title">UI/UX Design</h5>
+                <p class="card-text"> We design clean and user-friendly interfaces.</p>
+                <button class="btn btn-warning">View Details</button>
+            </div>
+        </div>
+        </div>
+
+        <!-- Task 3 -->
+       <h2>Buttons</h2>
+       <button class="btn btn-primary">Primary Button</button>
+       <button class="btn btn-success">Success Button</button>
+       <button class="btn btn-danger">Danger Button</button>
+       <button class="btn btn-outline-success">Outline Success</button>
+       <button class="btn btn-outline-primary">Outline Primary</button>
+
+       <div class="alert alert-success alert-dismissible fade show shadow mt-5">
+           <strong>Success!</strong>
+           Your message has been submitted successfully.
+           <button type="button"  class="btn-close" data-bs-dismiss="alert"></button>
+       </div>
+
+       <!-- Task 4 -->
+        <form id="contact" class="container card shadow p-4 mt-4">
+            <div class="h2 bg-light p-3 text-center mb-4">Contact Us</div>
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+</body>
+</html>
+
+
